@@ -4,3 +4,15 @@
 ## 本周日24号之前，会整理完善自己的文档和代码进行开源
 
 一般照着文档搞应该都没啥大问题，但是介于开源后咨询的人比较多，目前通过一定的star规则进行，n个咨询加互助名额， 以及3个手摸手指导上线服务。咨询互助名额，按star的个位数由第一次提交代码的分钟个位数来确定，比如23:18分钟提交，则各位数是star排名个位数是8的则获取咨询加互助服务。
+
+## UI和后台管理UI
+
+<img src="https://7.dusays.com/2021/01/18/42a1b557bb89a.jpg"/>
+
+<img src="https://7.dusays.com/2021/01/18/1af0c2f3d02ee.png" />
+
+
+ ### 作者公众号
+ 
+《一只码》公众号创作者LaJun 微信phpcoder666 分享有趣的小项目以及技术推广变现经验
+<img src="https://leijun-common.oss-cn-shenzhen.aliyuncs.com/one-coder.png"/>
