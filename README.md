@@ -1,18 +1,62 @@
-# waimai
-外卖优惠券小程序—吃喝优惠券前后端完整代码开源，真正的6个点消费额推广美团优惠券和饿了么优惠券，支持H5，可视化后台支持任意添加带有活动页面的CPS项目，花小猪，各种社区团购等
+#### 安装部署
 
-## 本周日24号之前，会整理完善自己的文档和代码进行开源
+假设环境部署域名为 chihe.cn
+* 必须PHP7.2以上版本
+* 导入数据库 ，选择已有的数据库导入项目目录下的chihe.sql。 修改.env 中的数据库配置信息
 
-一般照着文档搞应该都没啥大问题，但是介于开源后咨询的人比较多，目前通过一定的star规则进行，n个咨询加互助名额， 以及3个手摸手指导上线服务。咨询互助名额，按star的个位数由第一次提交代码的分钟个位数来确定，比如23:18分钟提交，则各位数是star排名个位数是8的则获取咨询加互助服务。
+  ```
+  DB_DATABASE=                 //数据库
+  DB_USERNAME=			     //数据库用户
+  DB_PASSWORD=				 //数据库密码
+  ```
 
-## UI和后台管理UI
+* 配置订阅消息通知。首先在小程序后台获取应用ID和应用密匙。修改配置文件.env
 
-<img src="https://7.dusays.com/2021/01/18/42a1b557bb89a.jpg"/>
+  ```
+  CHI_HE_MINI_PROGRAM_APP_ID=    //应用ID
+  CHI_HE_MINI_PROGRAM_SECRET=    //应用密匙
+  ```
 
-<img src="https://7.dusays.com/2021/01/18/1af0c2f3d02ee.png" />
+  然后在小程序后台选择配置订阅消息，然后对应消息模板修改 Console/Commands/ChiHe.php
 
+  第54行，修改订阅消息的文案
 
- ### 作者公众号
+  ```
+  'thing2' => [
+  'value' => '又到了吃饭时刻，快来领吃喝炒鸡优惠券啦！',
+  ],
+  'thing4' => [
+  'value' => '红包天天领，天天能提醒，叫外卖省省省',
+  ],
+  ```
+
+* 根据服务器环境安装代码，参考laravel安装文档仅仅调整好nginx或者appache配置。能访问到laravel特有的404页面即配置成功
+然后到项目目录chiche-api下依次执行
+
+  ```
+  php artisan key:generate
+  php artisan jwt:secret  
+  php artisan storage:link
+  php artisan config:clear
+  php artisan cache:clear
+  ```
  
-《一只码》公众号创作者LaJun 微信phpcoder666 分享有趣的小项目以及技术推广变现经验
-<img src="https://leijun-common.oss-cn-shenzhen.aliyuncs.com/one-coder.png"/>
+ 可能遇到的问题： 安装phpinfo扩展， 把禁用的安全函数putenv    syslink函数放开。
+ 安装完毕后，访问域名 chihe.cn/api/chiheyouhui/project 能正常访问说明安装成功！
+
+* 启动订阅消息定时发送脚本。 每分钟执行一次，执行的命令是：注意要在项目目录下执行
+
+  ```
+  php artisan chihe:send-msg
+  ```
+
+  
+
+* 访问管理后台，chihe.cn/admin
+
+  账号密码是admin/admin
+
+  管理友联和赚钱项目中要跳转的第三方小程序ID和小程序活动页面的路径
+
+  可参考   https://mp.weixin.qq.com/s/JHDWqBvntD0-p-dXEntSQQ
+

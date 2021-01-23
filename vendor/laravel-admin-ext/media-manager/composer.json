@@ -1,0 +1,33 @@
+{
+    "name": "laravel-admin-ext/media-manager",
+    "description": "Media manager for laravel",
+    "type": "library",
+    "keywords": ["laravel-admin", "media", "manager"],
+    "homepage": "https://github.com/laravel-admin-extensions/media-manager",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "z-song",
+            "email": "zosong@126.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Encore\\Admin\\Media\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Encore\\Admin\\Media\\MediaServiceProvider"
+            ]
+        }
+    }
+}

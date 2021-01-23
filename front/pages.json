@@ -1,0 +1,58 @@
+{
+	"pages": [
+		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "吃喝券"
+			}
+		},
+		{
+		    "path" : "pages/link/link",
+		    "style" : {
+				"navigationBarTitleText": "更多小程序"
+			}
+		},
+		{
+		    "path" : "pages/user/user",
+		    "style": {
+		    	"navigationBarTitleText": "个人中心"
+		    }
+		}
+    ],	
+	// #ifdef  MP-WEIXIN
+	"tabBar": {
+	        "borderStyle": "black",
+	        "backgroundColor": "white",
+	        "color": "#333333",    
+			"fontSize" : "24upx", 
+	        "selectedColor": "#f4c242",
+	        "list": [{
+	                "pagePath": "pages/index/index",
+	                "text": "首页", 
+					"iconPath": "static/home.png",
+					"selectedIconPath": "static/home-active.png"
+					},
+				   {
+					   "pagePath": "pages/user/user",
+					   "text": "个人中心",
+					   "iconPath": "static/person.png",   
+					   "selectedIconPath": "static/person-active.png"
+				   }
+			   ]
+				   
+	},
+	// #endif
+	"globalStyle": {
+		"pageOrientation": "portrait",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "吃喝玩乐券",
+		"navigationBarBackgroundColor": "#f4c242",
+		"backgroundColor": "#F8F8F8",
+		"backgroundColorTop": "#F4F5F6",
+		"backgroundColorBottom": "#F4F5F6",
+		"mp-360": {
+			"navigationStyle": "custom"
+		}
+	}
+}

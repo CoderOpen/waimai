@@ -1,0 +1,35 @@
+index.html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<button class="share-btn" onclick="login('qq')">QQ</button>
+<button class="share-btn" onclick="login('github')">GitHub</button>
+<style>
+    .share-btn{
+        width: 100px;
+        padding: 20px;
+    }
+</style>
+<script>
+    function login(type) {
+        $.ajax({
+            url:"api/share/login/qq",
+            type: "GET",
+            data: {
+                type : type
+            },
+            success:function (data) {
+                //console.log(data)
+                location.href = data.data ;
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

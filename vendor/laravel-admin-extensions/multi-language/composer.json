@@ -1,0 +1,33 @@
+{
+    "name": "kevinsoft/multi-language",
+    "description": "description...",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/kevinsoft/multi-language",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wangxk",
+            "email": "wangxkww@foxmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "KevinSoft\\MultiLanguage\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KevinSoft\\MultiLanguage\\MultiLanguageServiceProvider"
+            ]
+        }
+    }
+}
