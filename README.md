@@ -74,4 +74,4 @@
 
 微信phpcoder666
 
-<image src='./temp/reward.jpeg' style="margin:0 20px;width:300px;height:auto" > <image src='./temp/lajun-wechat.jpeg' style="margin:0 20px;width:300px;height:auto" >
+<image src='./temp/reward.jpeg' style="margin:0 20px;width:300px;height:auto" > <image src='./temp/lajun-wechat.jpeg' style="margin:0 200px;width:300px;height:auto" >
