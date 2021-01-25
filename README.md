@@ -1,3 +1,9 @@
+#### 概述
+
+之前开源的是前端版本，主要是因为后端搞起来比较麻烦，一但开源可能会很多人联系咨询。
+即便没有开源的时候，都有不少加好友问问题，加上自己有在上班，忙的时候会忘记回复信息，很抱歉。
+所以采取付费优先的原则。当然如果有时间的话，我正好看到了也是会回的。
+
 #### 安装部署
 
 假设环境部署域名为 chihe.cn
@@ -59,4 +65,13 @@
   管理友联和赚钱项目中要跳转的第三方小程序ID和小程序活动页面的路径
 
   可参考   https://mp.weixin.qq.com/s/JHDWqBvntD0-p-dXEntSQQ
+  
+#### 改进计划
 
+欢迎各位大佬加入项目，让这个项目更加完善
+
+#### 打赏与联系作者
+
+微信phpcoder666
+
+<image src='./temp/reward.jpeg' style="margin:0 20px;width:300px;height:auto" > <image src='./temp/lajun-wechat.jpeg' style="margin:0 20px;width:300px;height:auto" >
