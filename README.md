@@ -58,7 +58,7 @@
 
   
 
-* 访问管理后台，chihe.cn/admin
+* 访问管理后台，chihe.cn/chihe-admin
 
   账号密码是admin/admin
 
