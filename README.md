@@ -5,6 +5,16 @@
 所以采取付费优先的原则。当然如果有时间的话，我正好看到了也是会回的。
 
 #### 安装部署
+##### 前端安装
+* front目录导入xbulid开发工具
+* 接口请求地址：
+
+common/authorize.js 第1行的baseUrl基础请求地址，第75行左右的登录请求路经
+common/service.js 第13行左右config.baseUrl的全局l基础请求地址
+应用相关配置：
+
+Vue.prototype.wechatAppId = "12313" Vue.prototype.templateId = "发送消息的模板" Vue.prototype.shareImage = "分享预览图" Vue.prototype.contactImage = "用户联系方式地址" Vue.prototype.raiseImage="赞赏码地址"
+
 
 假设环境部署域名为 chihe.cn
 * 必须PHP7.2以上版本
